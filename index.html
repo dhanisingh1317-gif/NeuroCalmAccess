@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NeuroCalm Access</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+<span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span>
+
+<header>
+  <button class="homebtn" data-go="home" aria-label="Home">Home</button>
+  <h1>NeuroCalm Access</h1>
+  <button class="mutebtn" id="calmBtn" aria-pressed="false">Calm mode: off</button>
+</header>
+
+<main>
+  <!-- HOME -->
+  <section id="v-home" class="view">
+    <div class="hero"><div id="homeCloud" class="char"></div><div class="bubble say" id="say-home"></div></div>
+    <svg class="rainbow" viewBox="0 0 300 150" aria-hidden="true">
+      <g fill="none" stroke-width="12" stroke-linecap="round" opacity=".85">
+        <path d="M20 145a130 130 0 0 1 260 0" stroke="#ff9aa8"/><path d="M34 145a116 116 0 0 1 232 0" stroke="#ffd29a"/>
+        <path d="M48 145a102 102 0 0 1 204 0" stroke="#fff0a0"/><path d="M62 145a88 88 0 0 1 176 0" stroke="#bfe6b0"/>
+        <path d="M76 145a74 74 0 0 1 148 0" stroke="#a9d6f0"/><path d="M90 145a60 60 0 0 1 120 0" stroke="#cdb8ee"/>
+      </g>
+    </svg>
+    <div class="tiles">
+      <button class="tile t-blue" data-go="stress"><b>Stress Check</b><small>How are you feeling?</small></button>
+      <button class="tile t-green" data-go="focus"><b>Focus Support</b><small>Grow your plant</small></button>
+      <button class="tile t-yellow" data-go="about"><b>About Us</b><small>Why we made this</small></button>
+      <button class="tile t-denim" data-go="design"><b>About the Design</b><small>Colors, calm and testing</small></button>
+    </div>
+  </section>
+
+  <!-- STRESS CHECK -->
+  <section id="v-stress" class="view" hidden>
+    <div class="hero"><div id="stressCloud" class="char"></div><div class="bubble say" id="say-stress"></div></div>
+    <div class="card"><h2>Tap how you feel</h2><div class="moods" id="moods"></div></div>
+    <div class="card"><h2>Your last 7 days</h2><div class="bars" id="bars"></div>
+      <p class="tiny" id="barNote"></p></div>
+    <div class="card"><h2>Just calm down and take a breath</h2>
+      <div class="pick"><button class="btn on" data-mode="whale">Whale breathing</button><button class="btn" data-mode="snake">Snake breathing</button></div>
+      <p id="modeText" class="tiny"></p>
+      <div class="orbwrap"><div class="orb" id="orb"><span id="orbText">Ready?</span></div></div>
+      <button class="btn big" id="breathGo">Start</button>
+      <div class="tips">
+        <div class="tip">Close your eyes and slowly count to 5</div>
+        <div class="tip">Stretch your arms over your head and take a deep breath</div>
+        <div class="tip">Sit in a comfortable spot and rest your hands on your legs</div>
+        <div class="tip">Have a drink of water and take a deep breath</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOCUS -->
+  <section id="v-focus" class="view" hidden>
+    <div class="hero"><div id="plantBig" class="char"></div><div class="bubble say" id="say-focus"></div></div>
+    <div class="card center"><h2>Focus timer</h2>
+      <div class="pick" id="mins"><button class="btn" data-m="1">1 min</button><button class="btn" data-m="10">10 min</button><button class="btn on" data-m="25">25 min</button></div>
+      <div class="clock" id="clock">25:00</div>
+      <button class="btn big" id="focusGo">Start focusing</button>
+    </div>
+    <div class="card"><h2>Focus check</h2><div class="week" id="week"></div></div>
+  </section>
+
+  <!-- ABOUT US -->
+  <section id="v-about" class="view" hidden>
+    <div class="hero"><div id="sunBig" class="char"></div><div class="bubble say" id="say-about"></div></div>
+    <div class="card"><h2>What problems does it try to solve?</h2>
+      <p>Stress. Students feel overwhelmed, mentally tired and under academic pressure, and often cannot reach support easily.</p></div>
+    <div class="card"><h2>What is it?</h2>
+      <p>NeuroCalm Access is a BrainTech project concept. It explores how technology and neuroscience could make calming and stress-management support more accessible and personal.</p></div>
+    <div class="card"><h2>What is the hypothesis?</h2>
+      <p>Tracking mood, practicing guided breathing and using interactive focus tools will reduce stress and improve concentration for students during high-stress times.</p></div>
+  </section>
+
+  <!-- ABOUT THE DESIGN -->
+  <section id="v-design" class="view" hidden>
+    <div class="hero"><div id="sunBig2" class="char"></div><div class="bubble say" id="say-design"></div></div>
+    <div class="card"><h2>Why this design?</h2>
+      <p>Research suggests colors affect mood, and blue, green and yellow are linked with feeling relaxed and focused. That is why they run through the whole site.</p>
+      <p>Research published by the National Institutes of Health suggests breathing exercises can help reduce stress, so we added breathing tips.</p></div>
+    <div class="card"><h2>How will we test it?</h2>
+      <p>1. Gather scientific information on neurofeedback, stress-relief techniques and focus methods.</p>
+      <p>2. Run a feedback survey with students and peers.</p>
+      <p>3. Use the feedback to improve features, accessibility and effectiveness.</p></div>
+  </section>
+</main>
+
+<footer>This is a school prototype, not medical advice. If you feel very low, talk to someone you trust.</footer>
+<script src="app.js"></script>
+</body>
+</html>
